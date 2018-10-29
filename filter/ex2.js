@@ -15,8 +15,16 @@ Exemple d'entrée:
 
  */
 
-function getMultiplesOf(numbers, n) {
+const getMultiplesOf=(tab, numb)=>{
+  return tab.filter(multiple =>{
+    return (multiple % numb == 0)
+  })
 }
+
+const test = ([-12, -10, -7, -1, 5, 8, 11, 15, 20, 27])
+
+console.log(getMultiplesOf(test,5));
+
 
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;

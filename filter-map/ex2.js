@@ -24,7 +24,15 @@ Sortie attendue:
 
 */
 
-function getCampusesTeachingReact(campuses) {
+getCampusesTeachingReact = (tabcampuses)=> {
+  return tabcampuses.filter(campusReact =>{
+    if (campusReact.curriculums[0] === "JS/React" || campusReact.curriculums[1]=== "JS/React"){
+      return campusReact;
+    }
+  })
+  .map(campusReact =>{
+    return campusReact.city;
+  })
 }
 
 module.exports = getCampusesTeachingReact;

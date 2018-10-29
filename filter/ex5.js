@@ -38,8 +38,16 @@ Exemple d'entrée:
 
  */
 
-function searchWordFilter(items, search) {
+const searchWordFilter = (tabItems, search) => {
+  return tabItems.filter(result => {
+    const putain = search.charAt().toUpperCase() + search.substring(1)
+    if (result.includes(putain)) {
+      return result
+    }
+  })
 }
+
+
 
 // Ne pas modifier l'export
 module.exports = searchWordFilter;

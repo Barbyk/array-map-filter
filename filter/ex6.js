@@ -26,7 +26,14 @@ Sortie attendue:
 
 */
 
-function filterOffensiveComments(comments, bannedWords) {
+const filterOffensiveComments = (tabComments, tabBannedWords)=>{
+  return tabComments.filter(result =>{
+    let word = result.toLowerCase()
+    const putain = word.includes(tabBannedWords[0]) + word.includes(tabBannedWords[1])
+    if (!putain){
+      return result
+    }
+  })
 }
 
 // Ne pas modifier l'export

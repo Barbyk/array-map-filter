@@ -21,9 +21,21 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
-}
 
+
+ const getStringsLength=(tab)=>{
+    return tab.map (food=>{
+      return food +" contains "+(food.length) +" characters"
+    })
+  }
+
+ const tab = [
+    'Chicken',
+    'Bacon',
+    'Tofu',
+    'Mayonnaise'
+  ]
+ console.log(getStringsLength(tab))
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
 // console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));

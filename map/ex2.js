@@ -42,10 +42,36 @@ En sortie: [
 
  */
 
-function getFoodCategories(foods) {
+const getFoodCategories=(tab)=> {
+  return tab.map(miam =>{
+    if (miam.isVegetarian === true){
+      return miam.food+ " is suitable for vegetarians"
+    }
+    else {
+      return miam.food+ " is not suitable for vegetarians"
+    }
+  })
 }
 
-
+const test = [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+]
+console.log(getFoodCategories(test));
 
 // Ne pas modifier l'export
 module.exports = getFoodCategories;
